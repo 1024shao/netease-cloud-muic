@@ -11,7 +11,7 @@ import {
 import HYAlbumCover from "@/components/album-cover";
 import HYPagination from "@/components/pagination";
 
-export default memo(function HYHotAlbum() {
+export default memo(function HYHotAlbum () {
   // redux hooks
   const { hotAlbum, albumTotal, currentPage } = useSelector(
     (state) => ({

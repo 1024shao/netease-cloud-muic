@@ -173,7 +173,6 @@ export const Operator = styled.div`
   display: flex;
   position: relative;
   top: 5px;
-
   .btn {
     width: 25px;
     height: 25px;
@@ -193,14 +192,17 @@ export const Operator = styled.div`
   .share {
     background-position: -114px -163px;
   }
-
-  .left {
-    margin-top: 10px;
-    width: 90px;
-    height: 25px;
+  .left{
+    padding-top: 10px;
     display: flex;
-    background-color: pink;
-    align-items: center;
+  }
+
+  .favor {
+    background-position: -88px -163px;
+  }
+
+  .share {
+    background-position: -114px -163px;
   }
 
   .anticon-download {
@@ -223,15 +225,15 @@ export const Operator = styled.div`
 
     .loop {
       background-position: ${(props) => {
-        switch (props.playSequence) {
-          case 1:
-            return "-66px -248px;";
-          case 2:
-            return "-66px -344px;";
-          default:
-            return "-3px -344px;";
-        }
-      }};
+    switch (props.playSequence) {
+      case 1:
+        return "-66px -248px;";
+      case 2:
+        return "-66px -344px;";
+      default:
+        return "-3px -344px;";
+    }
+  }};
     }
 
     .playlist {

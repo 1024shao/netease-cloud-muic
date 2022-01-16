@@ -6,7 +6,7 @@ import { getTopBannerAction } from "../../store/actionCreators";
 
 import { BannerWrapper, BannerLeft, BannerRight, BannerControl } from "./style";
 
-export default memo(function HYTopBanner() {
+export default memo(function HYTopBanner () {
   // state
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -35,9 +35,7 @@ export default memo(function HYTopBanner() {
       setCurrentIndex(to);
     }, 0);
   }, []);
-  const bgImage =
-    topBanners[currentIndex] &&
-    topBanners[currentIndex].imageUrl + "?imageView&blur=40x20";
+  const bgImage = topBanners.length && (topBanners[currentIndex].imageUrl + "?imageView&blur=40x20")
 
   return (
     <BannerWrapper bgImage={bgImage}>
